@@ -306,6 +306,12 @@ var controller = (function(budgetCtrl, UICtrl) {
             var rmvCheckBoxesInc = document.querySelectorAll(DOM.itemCheckBoxInc);
             var rmvCheckBoxesExp = document.querySelectorAll(DOM.itemCheckBoxExp);
 
+            // for (var i = 0; i < rmvCheckBoxes.length; i++) {
+            //     if (rmvCheckBoxes[i].checked == true) {
+            //         ctrlDeleteItem(i);
+            //     }
+            // }
+
             if (rmvCheckBoxesInc) {
                 for (var i = 0; i < rmvCheckBoxesInc.length; i++) {
                     if (rmvCheckBoxesInc[i].checked == true) {
@@ -367,6 +373,7 @@ var controller = (function(budgetCtrl, UICtrl) {
         updatePercentages();
         }
     };
+
 
         // the checkbox shows me the ID of item
         var ctrlDeleteItemInc = function(event) {

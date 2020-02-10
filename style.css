@@ -50,7 +50,7 @@ body {
 
 .print {
     float: right;
-    font-size: 50px;
+    height: 50px;
     margin: 1.5% 5.5% 0 0;
     background-color: transparent;
     border: none;
@@ -182,7 +182,6 @@ body {
 
 .inputs__btn {
     background: red;
-    font-size: 35px;
     background: none;
     border: none;
     color: #28B9B5;
@@ -191,6 +190,11 @@ body {
     vertical-align: middle;
     line-height: 1.1;
     margin-left: 10px;
+}
+
+.inputs__btn img {
+    height: 3rem;
+    margin: 0.3rem;
 }
 
 .inputs__btn:active { transform: translateY(2px); }
@@ -304,17 +308,32 @@ div [class*='item__checkbox'] {
 
 .delete__btn {
     position: relative;
+    width: 9rem;
     display: block;
     margin: 70px auto 40px auto;
     padding: 10px;
     background-color: transparent;
     cursor: pointer;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
-.delete__icon {
-    font-size: 23px;
+.delete__btn:focus {
+    outline: none;
+}
+
+.delete__btn p {
+    position: absolute;               
+   top: 50%; 
+   right: 4%;                        
+   transform: translate(0, -50%);
+   display: block;
+}
+
+
+.delete__btn img {
+    height: 1.7rem; 
+    float: left;
 }
 
 
@@ -332,7 +351,9 @@ div [class*='item__checkbox'] {
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.45)), url(pig3.jpg);
         background-position: left bottom;
     }
-
+    .print__img {
+        height: 4rem;
+    }
     .budget {
         width: 250px;
     }
@@ -358,6 +379,7 @@ div [class*='item__checkbox'] {
         margin-right: 5vw;
     }
     .delete__btn {
+        width: 8rem;
         font-size: 17px;
     }
     .income__list {
@@ -396,11 +418,13 @@ div [class*='item__checkbox'] {
     }
     .print {
         float: right;
-        font-size: 40px;
         margin: 1.5% 5.5% 0 0;
         background-color: transparent;
         border: none;
         cursor: pointer;
+    }
+    .print__img {
+        height: 2.7rem;
     }
     .budget {
         width: 200px;
@@ -460,8 +484,13 @@ div [class*='item__checkbox'] {
     .delete__btn {
         padding: 8px;
         font-size: 15px;
+        width: 7rem;
     }
     
+    .delete__btn img {
+        height: 1.3rem;
+    }
+
     .container {
         margin-top: 40px;
     }
