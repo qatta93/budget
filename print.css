@@ -1,4 +1,3 @@
-
 /* ***** general **************************************************************** */
 
 * {
@@ -51,7 +50,7 @@ body {
 
 .print {
     float: right;
-    font-size: 50px;
+    height: 50px;
     margin: 1.5% 5.5% 0 0;
     background-color: transparent;
     border: none;
@@ -182,16 +181,18 @@ body {
 .inputs__value { width: 100px;}
 
 .inputs__btn {
-    background: red;
-    font-size: 35px;
     background: none;
     border: none;
-    color: #28B9B5;
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
     line-height: 1.1;
     margin-left: 10px;
+}
+
+.inputs__btn img {
+    height: 3rem;
+    margin: 0.3rem;
 }
 
 .inputs__btn:active { transform: translateY(2px); }
@@ -207,12 +208,6 @@ body {
 
 /***** ELEMENTS *****/
 
-/* .container {
-    width: 1000px;
-    margin: 60px auto 30px auto;
-    position: relative;
-    
-} */
 
 .container {
     display: flex;
@@ -303,19 +298,60 @@ div [class*='item__checkbox'] {
     color: #FF5049;
 }
 
+.container__btn {
+    margin: 70px auto 40px auto;
+    text-align: center;
+    position: relative;
+    font-size: 1.3rem;
+    color: black;
+}
+
 .delete__btn {
     position: relative;
-    display: block;
-    margin: 70px auto 40px auto;
+    width: 9.2rem;
     padding: 10px;
     background-color: transparent;
     cursor: pointer;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin: 0;
 }
 
-.delete__icon {
-    font-size: 23px;
+.delete__btn:focus,
+.reset__btn:focus {
+    outline: none;
+}
+
+.delete__btn p {
+    position: absolute;               
+   top: 50%; 
+   right: 4%;                        
+   transform: translate(0, -50%);
+   display: block;
+}
+
+
+.delete__btn img {
+    height: 1.7rem; 
+    float: left;
+}
+
+.reset__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    position: relative;
+}
+
+.reset__img {
+    height: 3rem;
+    margin-top: 0.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -333,7 +369,9 @@ div [class*='item__checkbox'] {
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.45)), url(pig3.jpg);
         background-position: left bottom;
     }
-
+    .print__img {
+        height: 4rem;
+    }
     .budget {
         width: 250px;
     }
@@ -358,7 +396,12 @@ div [class*='item__checkbox'] {
         width: 25vw;
         margin-right: 5vw;
     }
+
+    .container__btn {
+        font-size: 17px;
+    }
     .delete__btn {
+        width: 8.5rem;
         font-size: 17px;
     }
     .income__list {
@@ -397,11 +440,13 @@ div [class*='item__checkbox'] {
     }
     .print {
         float: right;
-        font-size: 40px;
         margin: 1.5% 5.5% 0 0;
         background-color: transparent;
         border: none;
         cursor: pointer;
+    }
+    .print__img {
+        height: 2.7rem;
     }
     .budget {
         width: 200px;
@@ -443,7 +488,7 @@ div [class*='item__checkbox'] {
 
     .inputs {
         padding: 8px;
-        height: 6.8rem;
+        height: 7.7rem;
     }
     
     .inputs__type {
@@ -457,12 +502,19 @@ div [class*='item__checkbox'] {
     h2 {
         font-size: 14px;
     }
-
-    .delete__btn {
-        padding: 8px;
+    .container__btn {
         font-size: 15px;
     }
+    .delete__btn {
+        padding: 8px 6px;
+        font-size: 15px;
+        width: 7.7rem;
+    }
     
+    .delete__btn img {
+        height: 1.3rem;
+    }
+
     .container {
         margin-top: 40px;
     }
@@ -505,6 +557,7 @@ div [class*='item__checkbox'] {
     display: none;
 }
 
-.delete__btn {
+.container__btn {
     display: none;
 }
+
