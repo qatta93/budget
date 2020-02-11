@@ -163,7 +163,8 @@ var UIController = (function() {
         deleteBtn: '.delete__btn',
         itemCheckBoxInc: '.item__checkbox--inc',
         itemCheckBoxExp: '.item__checkbox--exp',
-        itemContent: '.item'
+        itemContent: '.item',
+        reset: '.reset__btn'
     };
 
     var formatNumber = function(num, type) {
@@ -306,12 +307,6 @@ var controller = (function(budgetCtrl, UICtrl) {
             var rmvCheckBoxesInc = document.querySelectorAll(DOM.itemCheckBoxInc);
             var rmvCheckBoxesExp = document.querySelectorAll(DOM.itemCheckBoxExp);
 
-            // for (var i = 0; i < rmvCheckBoxes.length; i++) {
-            //     if (rmvCheckBoxes[i].checked == true) {
-            //         ctrlDeleteItem(i);
-            //     }
-            // }
-
             if (rmvCheckBoxesInc) {
                 for (var i = 0; i < rmvCheckBoxesInc.length; i++) {
                     if (rmvCheckBoxesInc[i].checked == true) {
@@ -329,9 +324,13 @@ var controller = (function(budgetCtrl, UICtrl) {
             }
         });
 
+        var rstBtn = document.querySelector(DOM.reset);
 
 
-    };
+        rstBtn.addEventListener('click', function(){
+            location.reload(true);
+    });
+};
 
     var updateBudget = function() {
         //1. Calculate the budget
@@ -428,6 +427,7 @@ var controller = (function(budgetCtrl, UICtrl) {
         }
     };
 
+
     return {
         init: function() {
             console.log('The app is running.');
@@ -452,9 +452,6 @@ controller.init();
 
 
 
-// changing inner HTML
-var inputsContainerChange = document.querySelector('.inputs__container');
 
-if (window.screen.width < 400) {
-    inputsContainerChange.innerHTML = '<input type="text" class="inputs__description" placeholder="description"></input><select class="inputs__type"><option value="inc" selected>+</option><option value="exp">-</option></select><input type="number" class="inputs__value" placeholder="value"><button class="inputs__btn"><i class="ion-ios-plus-outline"></i></button>';
-};
+
+

@@ -181,10 +181,8 @@ body {
 .inputs__value { width: 100px;}
 
 .inputs__btn {
-    background: red;
     background: none;
     border: none;
-    color: #28B9B5;
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
@@ -210,12 +208,6 @@ body {
 
 /***** ELEMENTS *****/
 
-/* .container {
-    width: 1000px;
-    margin: 60px auto 30px auto;
-    position: relative;
-    
-} */
 
 .container {
     display: flex;
@@ -306,19 +298,27 @@ div [class*='item__checkbox'] {
     color: #FF5049;
 }
 
+.container__btn {
+    margin: 70px auto 40px auto;
+    text-align: center;
+    position: relative;
+    font-size: 1.3rem;
+    color: black;
+}
+
 .delete__btn {
     position: relative;
-    width: 9rem;
-    display: block;
-    margin: 70px auto 40px auto;
+    width: 9.2rem;
     padding: 10px;
     background-color: transparent;
     cursor: pointer;
     font-size: 18px;
     border-radius: 10px;
+    margin: 0;
 }
 
-.delete__btn:focus {
+.delete__btn:focus,
+.reset__btn:focus {
     outline: none;
 }
 
@@ -334,6 +334,24 @@ div [class*='item__checkbox'] {
 .delete__btn img {
     height: 1.7rem; 
     float: left;
+}
+
+.reset__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    position: relative;
+}
+
+.reset__img {
+    height: 3rem;
+    margin-top: 0.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -378,8 +396,12 @@ div [class*='item__checkbox'] {
         width: 25vw;
         margin-right: 5vw;
     }
+
+    .container__btn {
+        font-size: 17px;
+    }
     .delete__btn {
-        width: 8rem;
+        width: 8.5rem;
         font-size: 17px;
     }
     .income__list {
@@ -466,7 +488,7 @@ div [class*='item__checkbox'] {
 
     .inputs {
         padding: 8px;
-        height: 6.8rem;
+        height: 7.7rem;
     }
     
     .inputs__type {
@@ -480,11 +502,13 @@ div [class*='item__checkbox'] {
     h2 {
         font-size: 14px;
     }
-
-    .delete__btn {
-        padding: 8px;
+    .container__btn {
         font-size: 15px;
-        width: 7rem;
+    }
+    .delete__btn {
+        padding: 8px 6px;
+        font-size: 15px;
+        width: 7.7rem;
     }
     
     .delete__btn img {
