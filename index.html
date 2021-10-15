@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700&display=swap" rel="stylesheet">        
+            <link type="text/css" rel="stylesheet" media="screen" href="styles/style.css">
+            <link rel="stylesheet" media="print" href="styles/print.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <title>Your budget</title>
+        </head>
+        <body>
+            <div class="header">
+                <a href="javascript:window.print()"><button class="print" title="print me!"><img src="img/print.png" class="print__img"></button></a>
+                <div class="budget">
+                    <div class="budget__title">
+                        In <span class="budget__title--month">%Month%</span> your budget is:
+                    </div>
+                    <div class="budget__value">+ 3,800.00</div>
+                    <div class="budget__income clearfix">
+                        <div class="budget__income--text">Income</div>
+                        <div class="aside">
+                            <div class="budget__income--value">+ 5,300.00</div>
+                            <div class="budget__income--percentage">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="budget__expenses clearfix">
+                        <div class="budget__expenses--text">Expenses</div>
+                        <div class="aside clearfix">
+                            <div class="budget__expenses--value">- 1,500.00</div>
+                            <div class="budget__expenses--percentage">45%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main">
+                <div class="inputs">
+                    <div class="inputs__container">
+                        <select class="inputs__type">
+                            <option value="inc" selected>+</option>
+                            <option value="exp">-</option>
+                        </select>
+                        <input type="text" class="inputs__description" placeholder="description">
+                        <input type="number" class="inputs__value" placeholder="value">
+                        <button class="inputs__btn"><img src="img/plus.png"></button>
+                    </div>
+                </div>
+                
+                <div class="container clearfix">
+                    <div class="income">
+                        <h2 class="icome__title">Income</h2>
+                        <div class="income__list">
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="expenses">
+                        <h2 class="expenses__title">Expenses</h2>
+                        <div class="expenses__list"></div>
+                    </div>
+                </div>
+                <button class="delete__btn"><img src="img/delete.png"><p>&nbsp &nbsp delete me !</p></button>
+            </div>
+            <script src="app.js"></script>
+        </body>
+    </html>
