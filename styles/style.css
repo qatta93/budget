@@ -316,7 +316,7 @@ div [class*='item__checkbox'] {
     outline: none;
 }
 
-.delete__btn p {
+.delete__btn span {
     position: absolute;               
    top: 50%; 
    right: 4%;                        
